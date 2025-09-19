@@ -14,4 +14,6 @@
     <string name="column_comp_header">Column composable</string>
     <string name="column_comp_desc">A layout composable that places its children in a vertical sequence.</string>
     <string name="hello">Hello %1$s!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="roll">Roll</string>
 </resources>
