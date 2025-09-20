@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeBasics">
         <activity
+            android:name="tipcalculator.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.ComposeBasics" />
+        <activity
             android:name="clickbehaviour.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main"
