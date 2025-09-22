@@ -30,4 +30,18 @@
     <string name="tip_percentage">Tip Percentage</string>
     <string name="round_up_tip">Round up tip?</string>
     <string name="tip_amount">Tip Amount: %s</string>
+    <string name="prev">Previous</string>
+    <string name="next">Next</string>
+    <string name="cr1">Neymar</string>
+    <string name="cr2">Messi</string>
+    <string name="cr3">Ronaldo</string>
+    <string name="cr4">Lebron</string>
+    <string name="cr5">Vinicius</string>
+    <string name="yr1">2016</string>
+    <string name="yr2">2019</string>
+    <string name="yr3">2017</string>
+    <string name="yr4">2018</string>
+    <string name="yr5">2024</string>
+
+
 </resources>
