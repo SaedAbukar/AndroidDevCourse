@@ -42,6 +42,19 @@
     <string name="yr3">2017</string>
     <string name="yr4">2018</string>
     <string name="yr5">2024</string>
-
-
+    <string name="game_title">Number Guessing Game</string>
+    <string name="enter_guess">Enter your guess (1..100)</string>
+    <string name="make_guess">Make a guess!</string>
+    <string name="too_low">Too low!</string>
+    <string name="too_high">Too high!</string>
+    <string name="correct_guess">Correct! You guessed %1$d in %2$d guesses.</string>
+    <string name="submit_guess">Submit Guess</string>
+    <string name="invalid_input">Please enter a valid number between 1 and 100.</string>
+    <string name="game_over">Game Over</string>
+    <string name="play_again">Play Again</string>
+    <string name="result">Your guess is %s</string>
+    <string name="guesses_label">Guesses: %1$d</string>
+    <string name="results_label">Results: %1$s</string>
+    <string name="reset_game">Reset Game</string>
+    <string name="winning_numbers_label">Winning Numbers: %1$s</string>
 </resources>

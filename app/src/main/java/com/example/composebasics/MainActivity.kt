@@ -32,6 +32,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.composebasics.lottogame.ui.LottoScreen
 import com.example.composebasics.ui.theme.ComposeBasicsTheme
 
 class MainActivity : ComponentActivity() {
@@ -46,7 +47,9 @@ class MainActivity : ComponentActivity() {
                         color = Color.Transparent) {
                         //ComposeArticle(modifier = Modifier.padding(innerPadding))
                         //TaskManager(modifier = Modifier.padding(innerPadding))
-                        ComposeDisplay(Modifier.padding(innerPadding))
+                        //ComposeDisplay(Modifier.padding(innerPadding))
+                        //NumberGuesser(modifier = Modifier.padding(innerPadding))
+                        LottoScreen(modifier = Modifier.padding(innerPadding))
                     }
                 }
             }
@@ -178,6 +181,7 @@ fun GreetingPreview() {
     ComposeBasicsTheme {
         //ComposeArticle()
         //TaskManager()
-        ComposeDisplay()
+        //ComposeDisplay()
+        LottoScreen()
     }
 }
