@@ -83,14 +83,14 @@ fun LottoLayout(
 ) {
     Column(
         modifier = modifier
-            .padding(16.dp)
+            .padding(8.dp)
             .fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         for (i in 0 until 4) {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 for (j in i * 10 + 1..i * 10 + 10) {
                     LottoBox(
@@ -113,7 +113,7 @@ fun LottoBox(
 ) {
     Box(
         modifier = Modifier
-            .size(48.dp)
+            .size(36.dp)
             .padding(4.dp)
             .background(
                 color = if (selected) Color.Green else Color.LightGray,

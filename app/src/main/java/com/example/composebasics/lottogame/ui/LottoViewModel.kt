@@ -50,7 +50,7 @@ class LottoViewModel : ViewModel() {
             drawnNumbers = lotto.numbers,
             guesses = lotto.guesses,
             results = lotto.results,
-            selectedNumbers = emptySet(),
+            selectedNumbers = selection,
             errorMessage = null
         )
     }
