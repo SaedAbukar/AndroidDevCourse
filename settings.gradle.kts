@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "ComposeBasics"
 include(":app")
 include(":app:coroutinesandretrofit")
+include(":app:retrofit")
