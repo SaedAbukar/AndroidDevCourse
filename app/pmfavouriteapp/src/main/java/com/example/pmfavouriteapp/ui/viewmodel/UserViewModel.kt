@@ -3,17 +3,21 @@ package com.example.pmfavouriteapp.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pmfavouriteapp.entities.ParliamentMember
+import com.example.pmfavouriteapp.entities.User
 import com.example.pmfavouriteapp.repository.ParliamentRepository
 import com.example.pmfavouriteapp.repository.UserRepository
+import com.example.pmfavouriteapp.repository.NetworkParliamentRepository
 import com.example.pmfavouriteapp.relations.UserWithFavourites
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class UserViewModel(
     private val userRepository: UserRepository,
-    private val pmRepository: ParliamentRepository
+    private val pmRepository: ParliamentRepository,
+    private val networkRepository: NetworkParliamentRepository
 ) : ViewModel() {
 
     private val _userFavourites = MutableStateFlow<UserWithFavourites?>(null)
@@ -23,8 +27,14 @@ class UserViewModel(
     val allMembers: StateFlow<List<ParliamentMember>> = _allMembers
 
     init {
+        viewModelScope.launch {
+            val users = userRepository.getUsersWithFavourites().first()
+            if (users.isEmpty()) {
+                userRepository.addUser(User(userId = 1, username = "Default User"))
+            }
+        }
         loadUserFavourites()
-        loadAllMembers()
+        syncParliamentMembers()
     }
 
     private fun loadUserFavourites() {
@@ -35,10 +45,15 @@ class UserViewModel(
         }
     }
 
-    private fun loadAllMembers() {
+    private fun syncParliamentMembers() {
         viewModelScope.launch {
             pmRepository.getAllMembers().collectLatest { members ->
-                _allMembers.value = members
+                if (members.isEmpty()) {
+                    val remoteMembers = networkRepository.fetchAllMembers()
+                    pmRepository.addAll(remoteMembers)
+                } else {
+                    _allMembers.value = members
+                }
             }
         }
     }

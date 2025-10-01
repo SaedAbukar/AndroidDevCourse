@@ -18,9 +18,6 @@ interface UserDao {
     suspend fun insertUser(user: User)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertParliamentMember(member: ParliamentMember)
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addFavourite(crossRef: UserFavouriteCrossRef)
 
     @Query("DELETE FROM user_favourite_cross_ref WHERE userId = :userId AND hetekaId = :hetekaId")

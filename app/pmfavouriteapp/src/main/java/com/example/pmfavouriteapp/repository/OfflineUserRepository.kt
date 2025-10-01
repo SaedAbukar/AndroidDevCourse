@@ -1,6 +1,7 @@
 package com.example.pmfavouriteapp.repository
 
 import com.example.pmfavouriteapp.data.UserDao
+import com.example.pmfavouriteapp.entities.User
 import com.example.pmfavouriteapp.entities.UserFavouriteCrossRef
 import com.example.pmfavouriteapp.relations.UserWithFavourites
 import kotlinx.coroutines.Dispatchers
@@ -8,6 +9,10 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 
 class OfflineUserRepository(private val dao: UserDao) : UserRepository {
+
+    override suspend fun addUser(user: User) {
+        dao.insertUser(user)
+    }
 
     override fun getUsersWithFavourites(): Flow<List<UserWithFavourites>> =
         dao.getUsersWithFavourites()
