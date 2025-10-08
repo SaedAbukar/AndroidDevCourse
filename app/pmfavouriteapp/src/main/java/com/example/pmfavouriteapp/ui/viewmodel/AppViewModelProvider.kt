@@ -3,7 +3,6 @@ package com.example.pmfavouriteapp.ui.viewmodel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.pmfavouriteapp.MyApp
-import com.example.pmfavouriteapp.repository.NetworkParliamentRepository
 
 object AppViewModelProvider {
     val Factory = viewModelFactory {
@@ -11,12 +10,12 @@ object AppViewModelProvider {
             val app = MyApp.getInstance()
             val container = app.container
 
-            UserViewModel(
-                userRepository = container.userRepository,
-                pmRepository = container.parliamentRepository,
+            PartyViewModel(
+                repository = container.partyRepository,
                 networkRepository = container.networkParliamentRepository
             )
         }
+
     }
 }
 

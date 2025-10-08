@@ -10,10 +10,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.pmfavouriteapp.ui.ParliamentApp
+import com.example.pmfavouriteapp.ui.PartyListScreen
 import com.example.pmfavouriteapp.ui.theme.ComposeBasicsTheme
 import com.example.pmfavouriteapp.ui.viewmodel.AppViewModelProvider
-import com.example.pmfavouriteapp.ui.viewmodel.UserViewModel
+import com.example.pmfavouriteapp.ui.viewmodel.PartyViewModel
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +22,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeBasicsTheme {
-                val userViewModel: UserViewModel = viewModel(factory = AppViewModelProvider.Factory)
+                val partyViewModel: PartyViewModel = viewModel(factory = AppViewModelProvider.Factory)
 
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Column(modifier = Modifier.padding(innerPadding)) {
-                        ParliamentApp(
-                            viewModel = userViewModel,
-                            modifier = Modifier.padding(innerPadding)
-                        )
+                        PartyListScreen(partyViewModel)
                     }
                 }
             }

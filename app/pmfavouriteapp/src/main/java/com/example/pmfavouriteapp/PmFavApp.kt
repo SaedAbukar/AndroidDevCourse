@@ -1,7 +1,7 @@
 package com.example.pmfavouriteapp
 
 import android.app.Application
-import com.example.pmfavouriteapp.data.AppContainer
+import com.example.pmfavouriteapp.di.AppContainer
 
 class MyApp : Application() {
     lateinit var container: AppContainer
@@ -11,7 +11,6 @@ class MyApp : Application() {
         @Volatile
         private var instance: MyApp? = null
 
-        // Safe accessor
         fun getInstance(): MyApp =
             instance ?: throw IllegalStateException("Application is not created yet")
     }

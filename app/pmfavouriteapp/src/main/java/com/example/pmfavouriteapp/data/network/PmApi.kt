@@ -1,5 +1,5 @@
 package com.example.pmfavouriteapp.data.network
-import com.example.pmfavouriteapp.entities.ParliamentMember
+import com.example.pmfavouriteapp.data.model.Member
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -10,7 +10,7 @@ object PmApi {
 
     interface Service {
         @GET("seating.json")
-        suspend fun getSeating(): List<ParliamentMember>
+        suspend fun getSeating(): List<Member>
     }
 
     private val retrofit = Retrofit.Builder()
