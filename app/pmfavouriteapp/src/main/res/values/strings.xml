@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">PmFavouriteApp</string>
+    <string name="app_name">PM Favourite App</string>
+    <string name="title_parties">Parliament Parties</string>
+    <string name="label_favorite_members">Favorite Members: %1$d</string>
+    <string name="label_can_form_majority">Can form majority!</string>
+    <string name="label_members">Members: %1$d</string>
+    <string name="action_mark_favorite">Mark favorite</string>
+    <string name="action_unmark_favorite">Unmark favorite</string>
+    <string name="message_loading">Loading...</string>
+    <string name="message_error">An error occurred: %1$s</string>
+    <string name="message_no_parties">No parties available</string>
+    <string name="content_description_party_logo">%1$s logo</string>
 </resources>
