@@ -65,7 +65,8 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun hasPermissions(): Boolean {
-        if (mBluetoothAdapter == null || !mBluetoothAdapter!!.isEnabled) {
+        val adapter = mBluetoothAdapter
+        if (adapter == null || !adapter.isEnabled) {
             Log.d("DBG", "No Bluetooth LE capability")
             return false
         } else if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION)
