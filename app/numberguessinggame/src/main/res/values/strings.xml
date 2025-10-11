@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Number Guesser</string>
+    <string name="enter_guess">Enter your guess (1-100)</string>
+    <string name="submit_guess">Submit Guess</string>
+    <string name="too_low">Too low! Try again.</string>
+    <string name="too_high">Too high! Try again.</string>
+    <string name="make_guess">Make a guess!</string>
+    <string name="correct_guess">Correct! %1$d was the number in %2$d tries.</string>
+    <string name="play_again">Play Again</string>
+    <string name="invalid_guess">Invalid guess!</string>
+</resources>
