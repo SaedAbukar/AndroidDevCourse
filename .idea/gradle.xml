@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/bluetoothfinder" />
             <option value="$PROJECT_DIR$/app/coroutinesandretrofit" />
             <option value="$PROJECT_DIR$/app/numberguessinggame" />
             <option value="$PROJECT_DIR$/app/pmfavouriteapp" />

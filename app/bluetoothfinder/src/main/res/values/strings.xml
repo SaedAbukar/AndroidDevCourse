@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bluetooth Finder</string>
+    <string name="start_scanning">Start Scanning</string>
+    <string name="scanning">Scanning...</string>
+    <string name="nothing_found">Nothing Found</string>
+    <string name="unknown_device">Unknown Device</string>
+    <string name="rssi_format">%1$s dBm</string>
+    <string name="address_rssi_format">%1$s | %2$s</string>
+</resources>
+
+
